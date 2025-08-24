@@ -7,7 +7,7 @@ import { ThemeSwitcher } from "../ui/ThemeSwitcher";
 import AnimatedButton from "../ui/AnimatedButton";
 import { NAV_LINKS } from "@/lib/data";
 import { usePathname } from "next/navigation";
-import Image from "next/image"; // <-- Import Image
+import Image from "next/image";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,10 +25,10 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
     >
-      {/* --- THIS IS THE NEW VIT PUNE TOP BAR --- */}
+      {/* --- THIS IS THE VIT PUNE TOP BAR --- */}
       <div
         className={`
-          flex justify-center items-center gap-4 p-3 bg-dark-bg/50 backdrop-blur-sm
+          flex justify-center items-center gap-4 md:gap-8 p-3 bg-dark-bg/50 backdrop-blur-sm
           transition-all duration-300
           ${
             scrolled
@@ -37,16 +37,38 @@ const Navbar = () => {
           }
         `}
       >
-        <Image
-          src="/vit-logo.png" // Make sure you have this in your /public folder
-          alt="VIT Pune Logo"
-          width={40}
-          height={40}
-          className="h-10 w-auto"
-        />
-        <span className="text-sm md:text-lg font-semibold text-vit-blue">
-          Vishwakarma Institute of Technology, Pune
-        </span>
+        {/* VIT Branding */}
+        <div className="flex items-center gap-3">
+          <Image
+            src="/vit-logo.png" // Assumes this is in your /public folder
+            alt="VIT Pune Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+          />
+          <span className="text-sm md:text-lg font-semibold text-vit-blue">
+            Vishwakarma Institute of Technology, Pune
+          </span>
+        </div>
+
+        {/* --- ADDED SECTION START --- */}
+        {/* Separator */}
+        <div className="h-10 w-[1px] bg-gray-600 hidden md:block"></div>
+
+        {/* Department Branding */}
+        <div className="flex items-center gap-3">
+          <Image
+            src="/dssa-logo.png" // RENAMED LOGO in /public folder
+            alt="DSSA Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+          />
+          <span className="text-sm md:text-lg font-semibold text-gray-200 hidden sm:inline">
+            Computer Science & Engineering (Data Science)
+          </span>
+        </div>
+        {/* --- ADDED SECTION END --- */}
       </div>
 
       {/* --- This is the main navigation bar --- */}

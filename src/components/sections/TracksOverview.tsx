@@ -52,7 +52,7 @@ const TracksOverview = () => {
             </GlowCard>
           </motion.div>
 
-          {/* Track 2A Card */}
+          {/* Track 2 Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +65,8 @@ const TracksOverview = () => {
                   <FaLaptopCode size={50} />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">
-                  Track 2A: Web & AI Applications
+                  {/* UPDATED TITLE */}
+                  Track 2: Agriculture 4.0: From Farm to Fork
                 </h3>
                 <p className="text-light-text/80 mb-6 flex-grow">
                   Build end-to-end applications that integrate AI to deliver
@@ -74,7 +75,8 @@ const TracksOverview = () => {
                 </p>
                 <Link href="/tracks">
                   <AnimatedButton className="w-full bg-accent border-accent hover:bg-accent/90">
-                    View Details
+                    {/* UPDATED BUTTON TEXT FOR CONSISTENCY */}
+                    Explore Problems
                   </AnimatedButton>
                 </Link>
               </div>
