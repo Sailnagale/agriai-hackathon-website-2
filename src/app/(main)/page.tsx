@@ -5,6 +5,7 @@ import Hero from "@/components/sections/Hero";
 import Prizes from "@/components/sections/Prizes";
 import Team from "@/components/sections/Team";
 import TracksOverview from "@/components/sections/TracksOverview";
+import Rules from "@/components/sections/Rules"; // <-- 1. ADD THIS IMPORT
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <TracksOverview />
+      <Rules /> {/* <-- 2. ADD THE COMPONENT HERE */}
       <Prizes />
       <Team />
       <Faq />

@@ -66,7 +66,7 @@ export const TEAM_DATA = [
     name: "Ashwini Ranjit Nawadkar",
     role: "Faculty Coordinator",
     title: "Assistant Professor",
-    image: "/ashwini-ranjit-nawadkar.png",
+    image: "/ashwini.png",
   },
   {
     name: "Dr. Manoj Oak",
