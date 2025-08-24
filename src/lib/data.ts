@@ -50,17 +50,18 @@ export const TEAM_DATA = [
     title: "Director, VIT Pune",
     image: "/dr-vivek-deshpande.png",
   },
+
+  {
+    name: "Dr. Deepa Abin",
+    role: "Organizing Secretary",
+    title: "HOD, CSE (Data Science)",
+    image: "/prof-deepa-abin.png",
+  },
   {
     name: "Sayali Prakash Shinde",
     role: "Faculty Coordinator",
     title: "Assistant Professor",
     image: "/sayali-prakash-shinde.png",
-  },
-  {
-    name: "Prof. Deepa Abin",
-    role: "Organizing Secretary",
-    title: "HOD, CSE (Data Science)",
-    image: "/prof-deepa-abin.png",
   },
   {
     name: "Ashwini Ranjit Nawadkar",
