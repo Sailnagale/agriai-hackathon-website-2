@@ -1,6 +1,6 @@
 // src/components/layout/Footer.tsx
 import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import Link from "next/link";
+// Removed: import Link from "next/link";
 
 const Footer = () => {
   const socialLinks = [

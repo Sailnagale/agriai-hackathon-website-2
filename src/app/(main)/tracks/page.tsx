@@ -1,6 +1,7 @@
 // src/app/(main)/tracks/page.tsx
 import { TRACK_1_PROBLEMS } from "@/lib/data";
-import { FaDatabase, FaLink } from "react-icons/fa";
+// FaDatabase is not used, so it has been removed from the import.
+import { FaLink } from "react-icons/fa";
 
 const TracksPage = () => {
   return (

@@ -93,7 +93,7 @@ const RegisterPage = () => {
           {/* Leader's Details */}
           <fieldset className="space-y-6">
             <legend className="text-2xl font-bold text-primary mb-4">
-              Leader's Details
+              Leader&apos;s Details
             </legend>
             <div>
               <label htmlFor="leaderName" className={labelStyle}>

@@ -29,8 +29,8 @@ const ContactPage = () => {
             Get In Touch
           </h1>
           <p className="text-center text-xl text-light-text/80 mb-16 max-w-2xl mx-auto">
-            Have questions? We're here to help. Reach out to us or visit the
-            venue.
+            Have questions? We&apos;re here to help. Reach out to us or visit
+            the venue.
           </p>
         </motion.div>
 

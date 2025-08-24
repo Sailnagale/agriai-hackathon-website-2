@@ -31,7 +31,7 @@ const Hero = () => {
           8, 9, 10 September • VIT Pune Campus
         </div>
         <p className="mt-4 text-2xl md:text-4xl font-light italic text-light-text max-w-3xl">
-          "Where Young Minds Cultivate Future Farms"
+          &quot;Where Young Minds Cultivate Future Farms&quot;
         </p>
 
         <div className="my-8">
