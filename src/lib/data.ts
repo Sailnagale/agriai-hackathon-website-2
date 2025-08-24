@@ -40,20 +40,20 @@ export const FAQ_DATA = [
 export const TEAM_DATA = [
   {
     name: "Dr. R. M. Jalnekar",
-    role: "Convener",
+    role: "Chief Patron",
     title: "Director, VIT Pune",
     image: "/dr-r-m-jalnekar.png",
   },
   {
     name: "Dr. Vivek Deshpande",
-    role: "Convener",
+    role: "Chief Patron",
     title: "Director, VIT Pune",
     image: "/dr-vivek-deshpande.png",
   },
 
   {
     name: "Dr. Deepa Abin",
-    role: "Organizing Secretary",
+    role: "Convener",
     title: "HOD, CSE (Data Science)",
     image: "/prof-deepa-abin.png",
   },
