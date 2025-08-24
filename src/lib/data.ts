@@ -37,70 +37,89 @@ export const FAQ_DATA = [
   },
 ];
 
-export const TEAM_DATA = [
+export const TEAM_SECTIONS = [
   {
-    name: "Dr. R. M. Jalnekar",
-    role: "Chief Patron",
-    title: "Director, VIT Pune",
-    image: "/dr-r-m-jalnekar.png",
+    title: "Our Advisory",
+    members: [
+      {
+        name: "Prof.Dr. R. M. Jalnekar",
+        role: "Chief Patron",
+        title: "Director, VIT Pune",
+        image: "/dr-r-m-jalnekar.jpg",
+      },
+      {
+        name: "Prof.Dr. Vivek Deshpande",
+        role: "Chief Patron",
+        title: "Director, VIIT Pune",
+        image: "/dr-vivek-deshpande.png",
+      },
+    ],
   },
   {
-    name: "Dr. Vivek Deshpande",
-    role: "Chief Patron",
-    title: "Director, VIT Pune",
-    image: "/dr-vivek-deshpande.png",
-  },
-
-  {
-    name: "Dr. Deepa Abin",
-    role: "Convener",
-    title: "HOD, CSE (Data Science)",
-    image: "/prof-deepa-abin.png",
-  },
-  {
-    name: "Prof. Sayali Prakash Shinde",
-    role: "Faculty Coordinator",
-    title: "Assistant Professor",
-    image: "/sayali-prakash-shinde.png",
-  },
-  {
-    name: "Prof. Ashwini Ranjit Nawadkar",
-    role: "Faculty Coordinator",
-    title: "Assistant Professor",
-    image: "/ashwini.png",
+    title: "Organizing Team",
+    members: [
+      {
+        name: "Dr. Deepa Abin",
+        role: "Convener",
+        title: "HOD, CSE (Data Science)",
+        image: "/prof-deepa-abin.png",
+      },
+      {
+        name: "Prof. Sayali Prakash Shinde",
+        role: "Faculty Coordinator",
+        title: "Assistant Professor",
+        image: "/sayali-prakash-shinde.png",
+      },
+      {
+        name: "Prof. Ashwini Ranjit Nawadkar",
+        role: "Faculty Coordinator",
+        title: "Assistant Professor",
+        image: "/ashwini.png",
+      },
+    ],
   },
   {
-    name: "Dr. Manoj Oak",
-    role: "Expert From ARI",
-    title: "Scientist E, ARI",
-    image: "/dr-manoj-oak.png",
+    title: "Experts from ARI",
+    members: [
+      {
+        name: "Dr. Manoj Oak",
+        role: "Expert from ARI",
+        title: "Scientist E, ARI",
+        image: "/dr-manoj-oak.png",
+      },
+      {
+        name: "Dr. Abhinandan Surgonda Patil",
+        role: "Expert from ARI",
+        title: "Research Associate, ARI",
+        image: "/dr-abhinandan-patil.png",
+      },
+    ],
   },
   {
-    name: "Dr. Abhinandan Surgonda Patil",
-    role: "Expert From ARI",
-    title: "Research Associate, ARI",
-    image: "/dr-abhinandan-patil.png",
-  },
-
-  {
-    name: "Rohit Wakade",
-    role: "Tech Lead",
-    title: "Full-stack developer",
-    image: "/roh.jpg", // <-- Updated image
-  },
-  {
-    name: "Sail Nagale",
-    role: "Website Developer",
-    title: "Technical Team",
-    image: "/sail.jpg", // <-- Updated image
-  },
-  {
-    name: "Aadesh Deshmukh",
-    role: "Website developer",
-    title: "Technical Team",
-    image: "/aadesh.jpg", // <-- Updated image
+    title: "Student Technical Team",
+    members: [
+      {
+        name: "Rohit Wakade",
+        role: "Tech Lead",
+        title: "Full-stack developer",
+        image: "/roh.jpg",
+      },
+      {
+        name: "Sail Nagale",
+        role: "Website Developer",
+        title: "Technical Team",
+        image: "/sail.jpg",
+      },
+      {
+        name: "Aadesh Deshmukh",
+        role: "Website Developer",
+        title: "Technical Team",
+        image: "/aadesh.jpg",
+      },
+    ],
   },
 ];
+
 export const TRACK_1_PROBLEMS = [
   {
     title:
@@ -183,7 +202,7 @@ export const TRACK_1_PROBLEMS = [
     ],
     datasets: [],
   },
-]; // <-- FIX: Added closing bracket and semicolon for TRACK_1_PROBLEMS
+];
 
 export const TRACK_2_PROBLEMS = [
   {
@@ -294,4 +313,4 @@ export const TRACK_2_PROBLEMS = [
     ],
     datasets: [],
   },
-]; // <-- FIX: Removed the extra closing bracket from here.
+];
