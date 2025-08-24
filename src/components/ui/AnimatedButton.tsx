@@ -15,9 +15,8 @@ const AnimatedButton = ({
   className,
   ...props
 }: AnimatedButtonProps) => {
-  // Destructure the `onDrag` prop and pass the rest of the props to motion.button.
-  // This filters out the incompatible prop that is causing the build to fail.
-  const { onDrag, ...rest } = props;
+  // Destructure onDrag and onDragEnd to filter them out
+  const { onDrag, onDragEnd, ...rest } = props;
 
   return (
     <motion.button
