@@ -3,10 +3,11 @@
 
 import { PRIZES_BENEFITS } from "@/lib/data";
 import GlowCard from "../ui/GlowCard";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // <-- Import Variants type
 
 const Prizes = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
+    // <-- Add type annotation
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +17,8 @@ const Prizes = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
+    // <-- Add type annotation
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
       opacity: 1,
