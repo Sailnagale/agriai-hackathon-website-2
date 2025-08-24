@@ -17,7 +17,6 @@ const ParticlesBackground = () => {
     });
   }, []);
 
-  // Removed the 'container' parameter to resolve the unused variable warning.
   const particlesLoaded = async (): Promise<void> => {
     // You can add logic here if needed once particles are loaded
   };
@@ -36,7 +35,10 @@ const ParticlesBackground = () => {
             enable: true,
             mode: "grab",
           },
-          resize: true,
+          // CORRECTED: Changed 'resize: true' to a proper object
+          resize: {
+            enable: true,
+          },
         },
         modes: {
           grab: {
