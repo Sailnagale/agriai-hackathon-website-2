@@ -15,8 +15,8 @@ const AnimatedButton = ({
   className,
   ...props
 }: AnimatedButtonProps) => {
-  // Destructure onDrag and onDragEnd to filter them out
-  const { onDrag, onDragEnd, ...rest } = props;
+  // Destructure all incompatible drag and animation props to filter them out
+  const { onDrag, onDragEnd, onDragStart, onAnimationStart, ...rest } = props;
 
   return (
     <motion.button
