@@ -64,7 +64,7 @@ const Navbar = () => {
             height={40}
             className="h-10 w-auto"
           />
-          <span className="text-sm md:text-lg font-semibold text-gray-200 hidden sm:inline">
+          <span className="text-sm md:text-lg font-semibold text-gray-200">
             Computer Science & Engineering (Data Science)
           </span>
         </div>

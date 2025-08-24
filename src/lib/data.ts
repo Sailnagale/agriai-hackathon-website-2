@@ -58,13 +58,13 @@ export const TEAM_DATA = [
     image: "/prof-deepa-abin.png",
   },
   {
-    name: "Sayali Prakash Shinde",
+    name: "Prof. Sayali Prakash Shinde",
     role: "Faculty Coordinator",
     title: "Assistant Professor",
     image: "/sayali-prakash-shinde.png",
   },
   {
-    name: "Ashwini Ranjit Nawadkar",
+    name: "Prof. Ashwini Ranjit Nawadkar",
     role: "Faculty Coordinator",
     title: "Assistant Professor",
     image: "/ashwini.png",
