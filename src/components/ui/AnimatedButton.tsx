@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils"; // Make sure you have the utils file
+import { cn } from "@/lib/utils";
 
 interface AnimatedButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -15,6 +15,10 @@ const AnimatedButton = ({
   className,
   ...props
 }: AnimatedButtonProps) => {
+  // Destructure the `onDrag` prop and pass the rest of the props to motion.button.
+  // This filters out the incompatible prop that is causing the build to fail.
+  const { onDrag, ...rest } = props;
+
   return (
     <motion.button
       className={cn(
@@ -28,7 +32,8 @@ const AnimatedButton = ({
       )}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      {...props}
+      // Pass only the compatible props to the Framer Motion button
+      {...rest}
     >
       <span className="relative z-10">{children}</span>
     </motion.button>
