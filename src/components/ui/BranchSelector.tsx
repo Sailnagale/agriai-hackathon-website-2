@@ -13,7 +13,7 @@ const BranchSelector = () => {
         <p className="text-light-text/80">
           You are currently viewing tracks for:{" "}
           <strong className="text-primary">
-            {branch === "datascience" ? "CS & Data Science" : "Other Branches"}
+            {branch === "datascience" ? "CS (Data Science)" : "Other Branches"}
           </strong>
         </p>
 
@@ -39,7 +39,7 @@ const BranchSelector = () => {
           onClick={() => setBranch("datascience")}
           className="bg-secondary border-secondary"
         >
-          CS & Data Science
+          CS (Data Science)
         </AnimatedButton>
         <AnimatedButton
           onClick={() => setBranch("other")}
