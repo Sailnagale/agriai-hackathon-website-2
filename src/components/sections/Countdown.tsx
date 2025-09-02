@@ -18,7 +18,7 @@ const Countdown = () => {
     setIsClient(true);
 
     const calculateTimeLeft = () => {
-      const difference = +new Date("2025-09-08T09:00:00") - +new Date();
+      const difference = +new Date("2025-09-17T09:00:00") - +new Date();
       if (difference > 0) {
         return {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),

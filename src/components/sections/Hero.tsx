@@ -60,7 +60,7 @@ const Hero = () => {
           In association with Agharkar Research Institute (ARI)
         </p>
         <div className="font-mono text-md md:text-xl bg-dark-card/50 py-2 px-4 rounded-md border border-primary/20">
-          8,9,10 September • VIT Pune Campus
+          17,18,19 September • VIT Pune Campus
         </div>
         <p className="mt-4 text-2xl md:text-4xl font-light italic text-light-text max-w-3xl">
           &quot;Where Young Minds Cultivate Future Farms&quot;

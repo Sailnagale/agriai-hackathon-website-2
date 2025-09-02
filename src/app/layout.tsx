@@ -1,18 +1,20 @@
-import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
+// src/app/layout.tsx
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const roboto_mono = Roboto_Mono({
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import "./globals.css";
+
+import { ThemeProvider } from "next-themes";
+import { BranchProvider } from "@/context/BranchContext";
+
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-roboto-mono",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "AgriAi Hackathon 2025 | VIT Pune",
-  description:
-    "Where Young Minds Cultivate Future Farms. Join students, researchers, and professionals to tackle real-world challenges with Artificial Intelligence.",
+  title: "AgriAI Hackathon",
+  description: "Where Young Minds Cultivate Future Farms",
 };
 
 export default function RootLayout({
@@ -21,15 +23,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    // The <html> tag is the top-level element.
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${roboto_mono.variable} font-sans`}>
+      {/*
+        The <body> tag is the ONLY direct child of <html> in this component.
+        Next.js automatically handles creating the <head> tag from your metadata.
+        DO NOT put any spaces, comments, or characters between <html> and <body>.
+      */}
+      <body className={poppins.className}>
+        {/* ALL providers and your app's content go INSIDE the <body> tag */}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem={false}
+          enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <BranchProvider>{children}</BranchProvider>
         </ThemeProvider>
       </body>
     </html>
