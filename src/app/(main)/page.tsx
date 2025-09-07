@@ -6,6 +6,8 @@ import Prizes from "@/components/sections/Prizes";
 import Team from "@/components/sections/Team";
 import TracksOverview from "@/components/sections/TracksOverview";
 import Rules from "@/components/sections/Rules"; // <-- 1. ADD THIS IMPORT
+import Sponsors from "@/components/sections/Sponsors";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <TracksOverview />
       <Rules /> {/* <-- 2. ADD THE COMPONENT HERE */}
       <Prizes />
+      <Sponsors />
       <Team />
+      <Contact />
       <Faq />
     </>
   );
