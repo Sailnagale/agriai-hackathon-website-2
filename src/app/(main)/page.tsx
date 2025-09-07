@@ -18,8 +18,8 @@ export default function Home() {
       <Rules /> {/* <-- 2. ADD THE COMPONENT HERE */}
       <Prizes />
       <Sponsors />
-      <Team />
       <Contact />
+      <Team />
       <Faq />
     </>
   );
