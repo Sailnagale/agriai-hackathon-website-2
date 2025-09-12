@@ -36,7 +36,7 @@ const HACKATHON_DETAILS: DetailItem[] = [
   {
     icon: FaUsers,
     title: "Team Size",
-    description: "Maximum 5 members per team",
+    description: "Team size min 2 max 4 Students",
   },
   {
     icon: FaRupeeSign,
