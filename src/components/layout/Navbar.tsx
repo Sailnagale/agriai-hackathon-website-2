@@ -34,12 +34,13 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
+    // ==================================================================
+    // --- THIS IS THE FIX: Added `overflow-x-hidden` ---
+    // ==================================================================
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden`}
     >
-      {/* ================================================================== */}
-      {/* --- THIS IS THE RESTORED VIT PUNE TOP BAR --- */}
-      {/* ================================================================== */}
+      {/* --- This is the VIT Pune Top Bar --- */}
       <div
         className={`
           flex justify-center items-center p-4 bg-dark-bg/50 backdrop-blur-sm
@@ -115,7 +116,7 @@ const Navbar = () => {
             </nav>
 
             <div className="flex items-center space-x-4">
-             
+         
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdKtjn4tSjM_Q3gjpzGcXGx-ti9DJ1Jb-2hbOK3H_P7hg72yQ/viewform"
                 target="_blank"
