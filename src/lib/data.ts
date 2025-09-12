@@ -60,7 +60,7 @@ export const TEAM_SECTIONS = [
     members: [
       {
         name: "Dr.Vijay Mane",
-        role: "Dean - Alumni and Outreach",
+        role: "Dean – Analytics",
         title: "Associate Professor",
         image: "/mane.jpg",
       },
