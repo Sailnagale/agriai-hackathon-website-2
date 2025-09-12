@@ -42,7 +42,7 @@ export const TEAM_SECTIONS = [
     title: "Chief Patron",
     members: [
       {
-        name: "Prof.Dr. R. M. Jalnekar",
+        name: "Prof.Dr. Rajesh Jalnekar",
         role: "Director, VIT Pune",
         title: "",
         image: "/dr-r-m-jalnekar.jpg",
