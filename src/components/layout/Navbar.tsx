@@ -115,7 +115,7 @@ const Navbar = () => {
             </nav>
 
             <div className="flex items-center space-x-4">
-              <ThemeSwitcher />
+             
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdKtjn4tSjM_Q3gjpzGcXGx-ti9DJ1Jb-2hbOK3H_P7hg72yQ/viewform"
                 target="_blank"
