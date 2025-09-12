@@ -17,7 +17,7 @@ export default function Home() {
       <TracksOverview />
       <Rules /> {/* <-- 2. ADD THE COMPONENT HERE */}
       <Prizes />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Contact />
       <Team />
       <Faq />

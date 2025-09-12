@@ -60,13 +60,13 @@ export const TEAM_SECTIONS = [
     members: [
       {
         name: "Dr.Vijay Mane",
-        role: "Advisors",
+        role: "Dean - Alumni and Outreach",
         title: "Associate Professor",
         image: "/mane.jpg",
       },
       {
         name: "Dr.Nitin Sakhare",
-        role: "Advisors",
+        role: "Chief International Relations Officer",
         title: "Assistant Professor",
         image: "/sakhare.jpg",
       },
@@ -88,7 +88,7 @@ export const TEAM_SECTIONS = [
     members: [
       {
         name: "Dr.Rupali Mahajan",
-        role: "Research Coordinator",
+        role: "",
         title: "Associate Professor",
         image: "/mahajan.png",
       },

@@ -53,7 +53,7 @@ const HACKATHON_RULES: RuleItem[] = [
   {
     title: "Team Composition",
     description:
-      "Each team must have 2–5 members. Cross-disciplinary teams are encouraged.",
+      "Each team can have min 2 - max 4 members. Cross-disciplinary teams are encouraged.",
   },
   {
     title: "Problem Statements",

@@ -1,4 +1,3 @@
-// src/components/layout/Navbar.tsx
 "use client";
 
 import Link from "next/link";
@@ -8,9 +7,11 @@ import AnimatedButton from "../ui/AnimatedButton";
 import { NAV_LINKS } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -21,15 +22,29 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
     >
-      {/* --- THIS IS THE VIT PUNE TOP BAR --- */}
+      {/* ================================================================== */}
+      {/* --- THIS IS THE RESTORED VIT PUNE TOP BAR --- */}
+      {/* ================================================================== */}
       <div
         className={`
-          flex justify-center items-center gap-4 md:gap-8 p-3 bg-dark-bg/50 backdrop-blur-sm
-          transition-all duration-300
+          flex justify-center items-center p-4 bg-dark-bg/50 backdrop-blur-sm
+          text-center transition-all duration-300
+          flex-col gap-2 md:flex-row md:gap-8
           ${
             scrolled
               ? "-translate-y-full opacity-0"
@@ -40,35 +55,30 @@ const Navbar = () => {
         {/* VIT Branding */}
         <div className="flex items-center gap-3">
           <Image
-            src="/vit-logo.png" // Assumes this is in your /public folder
+            src="/vit-logo.png"
             alt="VIT Pune Logo"
             width={40}
             height={40}
-            className="h-10 w-auto"
+            className="h-8 w-auto md:h-10"
           />
-          <span className="text-sm md:text-lg font-semibold text-vit-blue">
+          <span className="text-xl md:text-2xl font-bold text-vit-blue">
             Vishwakarma Institute of Technology, Pune
           </span>
         </div>
-
-        {/* --- ADDED SECTION START --- */}
-        {/* Separator */}
         <div className="h-10 w-[1px] bg-gray-600 hidden md:block"></div>
-
         {/* Department Branding */}
         <div className="flex items-center gap-3">
           <Image
-            src="/dssa-logo.png" // RENAMED LOGO in /public folder
+            src="/dssa-logo.png"
             alt="DSSA Logo"
             width={40}
             height={40}
-            className="h-10 w-auto"
+            className="h-8 w-auto md:h-10"
           />
-          <span className="text-sm md:text-lg font-semibold text-gray-200">
+          <span className="text-sm md:text-base font-medium text-gray-400">
             Computer Science & Engineering (Data Science)
           </span>
         </div>
-        {/* --- ADDED SECTION END --- */}
       </div>
 
       {/* --- This is the main navigation bar --- */}
@@ -115,8 +125,44 @@ const Navbar = () => {
                   Register
                 </AnimatedButton>
               </a>
+              <button
+                className="md:hidden p-2 text-light-text"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* --- Mobile Menu Panel --- */}
+      <div
+        className={`md:hidden fixed top-0 right-0 h-full w-full bg-dark-bg z-40
+                    transform transition-transform duration-300 ease-in-out
+                    ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="flex flex-col items-center justify-center h-full pt-20 gap-8">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-2xl text-light-text hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdKtjn4tSjM_Q3gjpzGcXGx-ti9DJ1Jb-2hbOK3H_P7hg72yQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AnimatedButton className="mt-4 px-8 py-3 text-lg">
+              Register
+            </AnimatedButton>
+          </a>
         </div>
       </div>
     </header>

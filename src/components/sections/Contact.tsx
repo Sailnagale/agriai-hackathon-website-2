@@ -2,9 +2,11 @@
 import { FiPhone, FiUser } from "react-icons/fi";
 
 const coordinators = [
-  { name: "Pranav Anarase", phone: "7499003474" },
-  { name: "Tanisha Mandavia", phone: "9819485076" },
-  { name: "Tejas", phone: "9209044053" },
+  { name: "Pranav Anarase", phone: "7499003474", position: "President" },
+  { name: "Tanisha Mandavia", phone: "9819485076", position: "Vice President" },
+  { name: "Tanishq Raina", phone: "7827214186", position: "Secretary" },
+  { name: "Tejas Shah", phone: "9209044053", position: "Treasurer" },
+  // added new
 ];
 
 const Contact = () => {
@@ -20,7 +22,7 @@ const Contact = () => {
             student coordinators.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {coordinators.map((coordinator, index) => (
             <div
               key={coordinator.name}
@@ -31,9 +33,12 @@ const Contact = () => {
               <div className="text-primary inline-block mb-4">
                 <FiUser size={40} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-white mb-1">
                 {coordinator.name}
               </h3>
+              <p className="text-sm text-gray-400 mb-2">
+                {coordinator.position}
+              </p>
               <a
                 href={`tel:+91${coordinator.phone}`}
                 className="inline-flex items-center gap-2 text-secondary hover:underline"
