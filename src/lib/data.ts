@@ -39,7 +39,7 @@ export const FAQ_DATA = [
 
 export const TEAM_SECTIONS = [
   {
-    title: "Chief Patron",
+    title: "Chief Patrons",
     members: [
       {
         name: "Prof.Dr. Rajesh Jalnekar",
