@@ -39,24 +39,41 @@ export const FAQ_DATA = [
 
 export const TEAM_SECTIONS = [
   {
-    title: "Our Advisory",
+    title: "Chief Patron",
     members: [
       {
         name: "Prof.Dr. R. M. Jalnekar",
-        role: "Chief Patron",
-        title: "Director, VIT Pune",
+        role: "Director, VIT Pune",
+        title: "",
         image: "/dr-r-m-jalnekar.jpg",
       },
       {
         name: "Prof.Dr. Vivek Deshpande",
-        role: "Chief Patron",
-        title: "Director, VIIT Pune",
+        role: "Director, VIIT Pune",
+        title: "",
         image: "/dr-vivek-deshpande.png",
       },
     ],
   },
   {
-    title: "Organizing Team",
+    title: "Advisors",
+    members: [
+      {
+        name: "Dr.Vijay Mane",
+        role: "Advisors",
+        title: "Associate Professor",
+        image: "/mane.jpg",
+      },
+      {
+        name: "Dr.Nitin Sakhare",
+        role: "Advisors",
+        title: "Assistant Professor",
+        image: "/sakhare.jpg",
+      },
+    ],
+  },
+  {
+    title: "Convener",
     members: [
       {
         name: "Dr. Deepa Abin",
@@ -64,6 +81,22 @@ export const TEAM_SECTIONS = [
         title: "HOD, CSE (Data Science)",
         image: "/prof-deepa-abin.png",
       },
+    ],
+  },
+  {
+    title: "Research Coordinator",
+    members: [
+      {
+        name: "Dr.Rupali Mahajan",
+        role: "Research Coordinator",
+        title: "Associate Professor",
+        image: "/mahajan.png",
+      },
+    ],
+  },
+  {
+    title: "Organizing Team",
+    members: [
       {
         name: "Prof. Sayali Prakash Shinde",
         role: "Faculty Coordinator",
