@@ -38,7 +38,7 @@ const Navbar = () => {
     // --- THIS IS THE FIX: Added `overflow-x-hidden` ---
     // ==================================================================
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden bg-dark-bg/95 backdrop-blur-md`}
     >
       {/* --- This is the VIT Pune Top Bar --- */}
       <div
@@ -86,12 +86,12 @@ const Navbar = () => {
       <div
         className={`transition-all duration-300 ${
           scrolled
-            ? "bg-dark-bg/80 backdrop-blur-lg border-b border-primary/20"
-            : "bg-transparent"
+            ? "bg-dark-bg/90 backdrop-blur-lg border-b border-primary/20"
+            : "bg-dark-bg/95 backdrop-blur-md"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             <Link
               href="/"
               className="text-2xl font-bold text-primary font-mono tracking-tighter"
@@ -140,7 +140,7 @@ const Navbar = () => {
 
       {/* --- Mobile Menu Panel --- */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-full bg-dark-bg z-40
+        className={`md:hidden fixed top-0 right-0 h-full w-full bg-dark-bg z-50
                     transform transition-transform duration-300 ease-in-out
                     ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
