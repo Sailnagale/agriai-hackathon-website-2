@@ -36,7 +36,7 @@ const HACKATHON_DETAILS: DetailItem[] = [
   {
     icon: FaUsers,
     title: "Team Size",
-    description: "Team size min 2 max 4 Students",
+    description: "Team size  4 Students",
   },
   {
     icon: FaRupeeSign,
@@ -53,7 +53,7 @@ const HACKATHON_RULES: RuleItem[] = [
   {
     title: "Team Composition",
     description:
-      "Each team can have min 2 - max 4 members. Cross-disciplinary teams are encouraged.",
+      "Each team can have 4 members. Cross-disciplinary teams are encouraged.",
   },
   {
     title: "Problem Statements",
