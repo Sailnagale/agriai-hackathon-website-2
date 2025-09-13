@@ -34,69 +34,10 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    // ==================================================================
-    // --- THIS IS THE FIX: Added `overflow-x-hidden` ---
-    // ==================================================================
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden`}
     >
-      {/* --- This is the main navigation bar --- */}
-      <div
-        className={`transition-all duration-300 ${
-          scrolled
-            ? "bg-dark-bg/90 backdrop-blur-lg border-b border-primary/20"
-            : "bg-dark-bg/95 backdrop-blur-md"
-        }`}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link
-              href="/"
-              className="text-2xl font-bold text-primary font-mono tracking-tighter"
-            >
-              AgriAi
-            </Link>
-
-            <nav className="hidden md:flex items-center space-x-6">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`transition-colors duration-300 ${
-                    pathname === link.href
-                      ? "text-primary"
-                      : "text-light-text hover:text-primary"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-
-            <div className="flex items-center space-x-4">
-         
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdKtjn4tSjM_Q3gjpzGcXGx-ti9DJ1Jb-2hbOK3H_P7hg72yQ/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AnimatedButton className="hidden md:block">
-                  Register
-                </AnimatedButton>
-              </a>
-              <button
-                className="md:hidden p-2 text-light-text"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* --- This is the VIT Pune Top Bar --- */}
+      {/* This is the VIT Pune Top Bar */}
       <div
         className={`
           flex justify-center items-center p-4 bg-dark-bg/50 backdrop-blur-sm
@@ -138,6 +79,63 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* This is the main navigation bar */}
+      <div
+        className={`transition-all duration-300 ${
+          scrolled
+            ? "bg-dark-bg/80 backdrop-blur-lg border-b border-primary/20"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-primary font-mono tracking-tighter"
+            >
+              AgriAi
+            </Link>
+
+            <nav className="hidden md:flex items-center space-x-6">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`transition-colors duration-300 ${
+                    pathname === link.href
+                      ? "text-primary"
+                      : "text-light-text hover:text-primary"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="flex items-center space-x-4">
+              <ThemeSwitcher />
+              {/* --- LINK UPDATED HERE (for Desktop) --- */}
+              <a
+                href="https://learner.vierp.in"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AnimatedButton className="hidden md:block">
+                  Register
+                </AnimatedButton>
+              </a>
+              <button
+                className="md:hidden p-2 text-light-text"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* --- Mobile Menu Panel --- */}
       <div
         className={`md:hidden fixed top-0 right-0 h-full w-full bg-dark-bg z-50
@@ -155,8 +153,9 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          {/* --- LINK UPDATED HERE (for Mobile) --- */}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdKtjn4tSjM_Q3gjpzGcXGx-ti9DJ1Jb-2hbOK3H_P7hg72yQ/viewform"
+            href="https://learner.vierp.in"
             target="_blank"
             rel="noopener noreferrer"
           >

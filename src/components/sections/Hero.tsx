@@ -8,6 +8,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
+    // CHANGE #1: Simplified padding. The pt-48 is all we need here.
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center px-4 pt-48">
       <ParticlesBackground />
       <div className="absolute inset-0 z-0 bg-aurora-gradient animate-aurora"></div>
@@ -48,22 +49,20 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="relative z-10 flex flex-col items-center gap-6 pt-16"
+        // CHANGE #1: Removed the extra pt-16 from here.
+        className="relative z-10 flex flex-col items-center gap-6"
       >
         <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-primary/80">
           AgriAI Hackathon 2025
         </h1>
 
-        {/* ================================================================== */}
-        {/* --- THIS ENTIRE BLOCK IS UPDATED TO INCLUDE THE LOGO --- */}
-        {/* ================================================================== */}
         <div className="flex items-center justify-center gap-4 mt-2">
           <span className="text-lg text-light-text/70">Sponsored by</span>
           <div className="flex items-center gap-2 bg-dark-card/50 p-2 rounded-md">
             <Image
               src="/logo1.png"
               alt="Electro Inventor Logo"
-              width={140} // increase as per logo size
+              width={140}
               height={45}
               quality={100}
             />
@@ -85,8 +84,11 @@ const Hero = () => {
         </div>
 
         <div className="flex gap-4">
+          {/* ================================================================== */}
+          {/* --- CHANGE #2: Updated Register link to the VIERP Portal --- */}
+          {/* ================================================================== */}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdKtjn4tSjM_Q3gjpzGcXGx-ti9DJ1Jb-2hbOK3H_P7hg72yQ/viewform"
+            href="https://learner.vierp.in"
             target="_blank"
             rel="noopener noreferrer"
           >
