@@ -40,58 +40,16 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden`}
     >
-      {/* --- This is the VIT Pune Top Bar --- */}
-      <div
-        className={`
-          flex justify-center items-center p-4 bg-dark-bg/50 backdrop-blur-sm
-          text-center transition-all duration-300
-          flex-col gap-2 md:flex-row md:gap-8
-          ${
-            scrolled
-              ? "-translate-y-full opacity-0"
-              : "translate-y-0 opacity-100"
-          }
-        `}
-      >
-        {/* VIT Branding */}
-        <div className="flex items-center gap-3">
-          <Image
-            src="/vit-logo.png"
-            alt="VIT Pune Logo"
-            width={40}
-            height={40}
-            className="h-8 w-auto md:h-10"
-          />
-          <span className="text-xl md:text-2xl font-bold text-vit-blue">
-            Vishwakarma Institute of Technology, Pune
-          </span>
-        </div>
-        <div className="h-10 w-[1px] bg-gray-600 hidden md:block"></div>
-        {/* Department Branding */}
-        <div className="flex items-center gap-3">
-          <Image
-            src="/dssa-logo.png"
-            alt="DSSA Logo"
-            width={40}
-            height={40}
-            className="h-8 w-auto md:h-10"
-          />
-          <span className="text-sm md:text-base font-medium text-gray-400">
-            Computer Science & Engineering (Data Science)
-          </span>
-        </div>
-      </div>
-
       {/* --- This is the main navigation bar --- */}
       <div
         className={`transition-all duration-300 ${
           scrolled
-            ? "bg-dark-bg/80 backdrop-blur-lg border-b border-primary/20"
-            : "bg-transparent"
+            ? "bg-dark-bg/90 backdrop-blur-lg border-b border-primary/20"
+            : "bg-dark-bg/95 backdrop-blur-md"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             <Link
               href="/"
               className="text-2xl font-bold text-primary font-mono tracking-tighter"
@@ -138,9 +96,51 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* --- This is the VIT Pune Top Bar --- */}
+      <div
+        className={`
+          flex justify-center items-center p-4 bg-dark-bg/50 backdrop-blur-sm
+          text-center transition-all duration-300
+          flex-col gap-2 md:flex-row md:gap-8
+          ${
+            scrolled
+              ? "-translate-y-full opacity-0"
+              : "translate-y-0 opacity-100"
+          }
+        `}
+      >
+        {/* VIT Branding */}
+        <div className="flex items-center gap-3">
+          <Image
+            src="/vit-logo.png"
+            alt="VIT Pune Logo"
+            width={40}
+            height={40}
+            className="h-8 w-auto md:h-10"
+          />
+          <span className="text-xl md:text-2xl font-bold text-vit-blue">
+            Vishwakarma Institute of Technology, Pune
+          </span>
+        </div>
+        <div className="h-10 w-[1px] bg-gray-600 hidden md:block"></div>
+        {/* Department Branding */}
+        <div className="flex items-center gap-3">
+          <Image
+            src="/dssa-logo.png"
+            alt="DSSA Logo"
+            width={40}
+            height={40}
+            className="h-8 w-auto md:h-10"
+          />
+          <span className="text-sm md:text-base font-medium text-gray-400">
+            Computer Science & Engineering (Data Science)
+          </span>
+        </div>
+      </div>
+
       {/* --- Mobile Menu Panel --- */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-full bg-dark-bg z-40
+        className={`md:hidden fixed top-0 right-0 h-full w-full bg-dark-bg z-50
                     transform transition-transform duration-300 ease-in-out
                     ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >

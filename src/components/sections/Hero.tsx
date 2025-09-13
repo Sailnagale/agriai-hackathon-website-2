@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center px-4">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center px-4 pt-48">
       <ParticlesBackground />
       <div className="absolute inset-0 z-0 bg-aurora-gradient animate-aurora"></div>
 
@@ -48,7 +48,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="relative z-10 flex flex-col items-center gap-6 pt-48"
+        className="relative z-10 flex flex-col items-center gap-6 pt-16"
       >
         <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-primary/80">
           AgriAI Hackathon 2025
