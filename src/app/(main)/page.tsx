@@ -8,6 +8,7 @@ import TracksOverview from "@/components/sections/TracksOverview";
 import Rules from "@/components/sections/Rules"; // <-- 1. ADD THIS IMPORT
 import Sponsors from "@/components/sections/Sponsors";
 import Contact from "@/components/sections/Contact";
+import HowToRegister from "@/components/sections/HowToRegister";
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
       <Hero />
       <About />
       <TracksOverview />
-      <Rules /> {/* <-- 2. ADD THE COMPONENT HERE */}
+      <Rules />
+      <HowToRegister />
+      {/* <-- 2. ADD THE COMPONENT HERE */}
       <Prizes />
       {/* <Sponsors /> */}
       <Contact />
