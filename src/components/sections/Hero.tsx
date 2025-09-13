@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center px-4 pt-32">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center px-4 pt-48">
       <ParticlesBackground />
       <div className="absolute inset-0 z-0 bg-aurora-gradient animate-aurora"></div>
 
