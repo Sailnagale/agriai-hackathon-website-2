@@ -41,7 +41,7 @@ const HACKATHON_DETAILS: DetailItem[] = [
   {
     icon: FaRupeeSign,
     title: "Registration Fee",
-    description: "₹50 per participant",
+    description: "₹200 per team",
   },
 ];
 
