@@ -60,14 +60,14 @@ export const TEAM_SECTIONS = [
     members: [
       {
         name: "Dr.Vijay Mane",
-        role: "Dean – Analytics",
-        title: "Associate Professor",
+        role: "Dean Analytics and Alumni-Outreach",
+        title: "",
         image: "/mane.jpg",
       },
       {
         name: "Dr.Nitin Sakhare",
         role: "Chief International Relations Officer",
-        title: "Assistant Professor",
+        title: "",
         image: "/sakhare.jpg",
       },
     ],
